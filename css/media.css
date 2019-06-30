@@ -112,6 +112,11 @@
 	.contact-box img{
 		transform: scale(0.85);
 	}
+	
+	/*服务&产品媒体查询*/
+	footer{
+		margin-top: 1750px;
+	}
 }
 
 @media (max-width: 768px){
@@ -239,5 +244,24 @@
 	/*联系媒体查询*/
 	.contact-box img{
 		transform: scale(0.85);
+	}
+	
+	.sTitle{
+		font-size: 18px;
+	}
+	.banner .banner-content .container p{
+		font-size: 17px;
+	}	
+	footer{
+		margin-top: 1430px;
+	}
+	footer .container>p{
+		font-size: 10px;
+		float: left!important;
+	}
+	.backTop>a{
+		font-size: 20px;
+		margin-right: -10px;
+		margin-top: 22px;
 	}
 }

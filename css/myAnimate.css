@@ -1,0 +1,265 @@
+/*首页轮播字体放大动画*/
+@keyframes go{
+	0%{
+		transform: scale(0);		
+	}
+	50%{
+		transform: scale(1);
+	}
+	80%{
+		transform: scale(0.9);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+/*首页轮播字体上升动画*/
+@keyframes upto{
+	0%{
+		bottom: -220px;
+	}
+	50%{
+		bottom: 20px;
+	}
+	75%{
+		bottom: 3px;
+	}
+	85%{
+		bottom: 8px;
+	}
+	100%{
+		bottom: 0px;
+	}
+}
+
+/*首页轮播字体透明度动画*/
+@keyframes play{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+/*首页下页箭头动画*/
+@keyframes godown1{
+	0%{
+		opacity: .5;
+	}
+	50%{
+		padding-top: 15px;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes godown{
+	0%{
+		opacity: .5;
+	}
+	50%{
+		padding-top: 25px;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+/*关于机器人动画*/
+@keyframes walk{
+	0%{
+		right: 2%;
+	}
+	49.9%{
+		transform: rotateY(0deg);
+	}
+	50%{
+		right: 45%;
+		transform: rotateY(180deg);
+	}
+	100%{
+		right: 2%;
+		transform: rotateY(180deg);
+	}
+}
+
+/*关于字体动画*/
+@keyframes slideRight{
+	0%{
+		opacity: 0;
+		transform: translate3d(3000px,0,0);
+	}
+	60%{
+		opacity: 1;
+		transform: translate3d(-25px,0,0);
+	}
+	75%{
+		transform: translate3d(10px,0,0);
+	}
+	90%{
+		transform: translate3d(-5px,0,0);
+	}
+	100%{
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/*服务/方案/客户/联系标题弹跳动画*/
+@keyframes jump{
+	0%{
+		opacity: 1;
+		transform: scale3d(1,1,1);
+	}
+	30%{
+		transform: scale3d(1.25,.75,1);
+	}
+	40%{
+		transform: scale3d(.75,1.25,1);
+	}
+	50%{
+		transform: scale3d(1.15,.85,1);
+	}
+	65%{
+		transform: scale3d(.95,1.05,1);
+	}
+	75%{
+		transform: scale3d(1.05,.95,1);
+	}
+	100%{
+		opacity: 1;
+	    transform: scale3d(1,1,1);
+	}
+}
+
+/*服务内容弹跳动画*/
+@keyframes jump2{
+	0%{
+		opacity: 0;
+		transform: scale3d(.3,.3,.3);
+	}
+	20%{
+		transform: scale3d(1.1,1.1,1.1);
+	}
+	40%{
+		transform: scale3d(.9,.9,.9);
+	}
+	60%{
+		opacity: 1;
+		transform: scale3d(1.03,1.03,1.03);
+	}
+	80%{
+		transform: scale3d(.97,.97,.97);
+	}
+	75%{
+		opacity: 1;
+		transform: scale3d(1,1,1);
+	}
+	100%{
+		opacity: 1;
+	    transform: scale3d(1,1,1);
+	}
+}
+
+/*服务/方案内容缩放动画*/
+@keyframes toBig{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@keyframes toSmall{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(0);
+	}
+}
+
+/*方案内容下滑动画*/
+@keyframes goDown{
+	0%{
+		opacity: 0;
+		transform: translate3d(0,-3000px,0);
+	}
+	60%{
+		opacity: 1;
+		transform: translate3d(0,25px,0);
+	}
+	75%{
+		transform: translate3d(0,-10px,0);
+	}
+	90%{
+		transform: translate3d(0,5px,0);
+	}
+	100%{
+		transform: none;
+	}
+}
+
+/*方案内容上升动画*/
+@keyframes goUp{
+	0%{
+		opacity: 0;
+		transform: translate3d(0,3000px,0);
+	}
+	60%{
+		opacity: 1;
+		transform: translate3d(0,-20px,0);
+	}
+	75%{
+		transform: translate3d(0,10px,0);
+	}
+	90%{
+		transform: translate3d(0,-5px,0);
+	}
+	100%{
+		transform: translate3d(0,0,0);
+	}
+}
+
+/*客户Y轴3D旋转动画*/
+/*z轴垂直电脑屏幕指向你，y轴在电脑屏幕垂直朝下，x轴在电脑屏幕水平向右*/
+/*perspective为透视距*/
+@keyframes flipInY{
+	0%{
+		opacity: 0;
+		transform: perspective(400px) rotate3d(0,1,0,90deg);
+	}
+	40%{
+		transform: perspective(400px) rotate3d(0,1,0,-20deg);
+	}
+	60%{
+		transform: perspective(400px) rotate3d(0,1,0,10deg);
+    	opacity: 1;
+	}
+	80%{
+		transform: perspective(400px) rotate3d(0,1,0,-5deg);
+	}
+	100%{
+		transform: perspective(400px);
+	}
+}
+
+/*联系X轴3D旋转动画*/
+@keyframes filpInX{
+	0%{
+		opacity: 0;
+		transform: perspective(400px) rotate3d(1,0,0,90deg);
+	}
+	40%{
+		transform: perspective(400px) rotate3d(1,0,0,-20deg);
+	}
+	60%{
+		opacity: 1;
+		transform: perspective(400px) rotate3d(1,0,0,10deg);
+	}
+	80%{
+		transform: perspective(400px) rotate3d(1,0,0,-5deg);
+	}
+	100%{
+		transform: perspective(400px);
+	}
+}

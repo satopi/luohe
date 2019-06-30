@@ -1,0 +1,194 @@
+/*全局变量*/
+body{
+	color: #666;
+	overflow: auto;
+}
+
+
+/*导航条*/
+.navbar-list>li>a, .navbar-right>li>a {
+    font-size: 16px;
+}
+.navbar-brand {
+    height: 70px;
+}
+.navbar-list li {
+    width: auto;
+}
+
+/*头部*/
+.banner{
+	width: 100%;
+	height: auto;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+.banner .banner-img {
+    width: 100%;
+    min-height: 160px;
+}
+.banner .banner-content {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 15%;
+}
+.banner .banner-content .container h1{
+	font-weight: 800;
+}
+.banner .banner-content .container h1 span{
+	font-size: 1.2em;
+}
+.banner .banner-content .container p{
+	font-weight: 100;
+	margin-bottom: 20px;
+	font-size: 22px;
+	opacity: 0;
+}
+
+
+
+/*内容*/
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.now{
+	padding-right: 0;
+    padding-left: 0;
+    background-color: transparent;
+    border-radius: 0;
+    margin: 15px 0 30px;
+    padding: 8px 15px;
+    list-style: none;
+}
+.now li{
+	float: left;
+}
+.now li:first-child{
+	color: #777;
+	font-weight: bold;
+}
+.now li:last-child{
+	color: #777;
+}
+.now>.active:last-child:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/ ";
+}
+.now>li:nth-child(2) a{
+	text-decoration: underline;
+	color: #00C2FF;
+}
+ol+h2{
+	color: #777;
+}
+ol+h2 span{
+	font-size: 1.2em;
+}
+.sp-font{
+	font-style: italic;
+}
+.btn-info:hover,
+.btn-info:active,
+.btn-info:focus {
+    color: #fff;
+    background-color: #00c2ff;
+    border: 1px dotted #269abc;
+}
+
+.view {
+    border: 10px solid rgba(255,255,255,.6);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.view>a>img {
+    width: 100%;
+    position: relative;
+}
+.view-ninth .content {
+    background: #8e4f1b;
+    /*height: 0;*/
+    opacity: 0;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 27%;
+    transition: all .4s;
+    animation: rollOut .3s ease-in forwards;
+}
+.view h4 {
+    color: #f3bb38;
+    text-align: center;
+    position: relative;
+    margin: 30px 0 10px 0;
+    font-size: 22px;
+    background: transparent;
+}
+.view p {
+    font-style: italic;
+    position: relative;
+    color: #fff;
+    line-height: 1.8em;
+    padding: 10px 20px 0 20px;
+    text-align: center;
+}
+.view:hover .content{
+	animation: rollIn .3s ease-in .1s forwards;
+}
+.orange{
+	background: #f3bb38;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	animation: slideOutRight .2s ease-in .3s forwards;
+}
+.view:hover .orange{
+	animation: slideInLeft .1s linear forwards;
+}
+
+
+/*脚部*/
+footer{
+	width: 100%;
+	padding: 10px 15px;
+	margin-top: 430px;
+	background: black;
+	opacity: .6;
+}
+footer .container>p{
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	/*padding: 15px 0;*/
+	margin-top: 2%;
+}
+.backTop{
+	opacity: 0;
+	transition: all .4s;
+}
+.backTop a{
+	float: right;
+	color: #00C2FF;
+	opacity: .6;
+	font-size: 40px;
+	margin-left: 30px;
+	/*position: fixed;
+	top: 92%;
+	right: 6%;*/
+}
+.backTop a:hover,.backTop a:focus{
+	text-decoration: none;
+}
+.backTop+p{
+	float: left;
+}

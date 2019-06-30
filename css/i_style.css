@@ -141,7 +141,7 @@ body{
 	overflow: hidden;
 	position: relative;
 	background-size: cover;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 }
 .carousel-indicators {
     position: absolute;
@@ -329,6 +329,7 @@ body{
 #abouts .nav.nav-tabs li.active a {
     background-color: rgba(0,194,255,.7);
     color: #fff;
+    font-size: 18px;
 }
 #abouts .nav.nav-tabs li a {
     border: none;
@@ -337,6 +338,7 @@ body{
     text-decoration: none;
     color: #bbb;
     position: relative;
+    font-size: 18px;
 }
 #abouts .nav.nav-tabs li.active a:after {
     display: block;
@@ -354,7 +356,7 @@ body{
 #abouts .tab-content {
     text-align: left;
     opacity: 0;
-    font-size: 13.5px;
+    font-size: 15px;
 }
 .abouts-animate2{
 	animation: slideRight 1.2s ease 1 forwards;
@@ -493,6 +495,7 @@ a:focus, a:hover {
 .client-img{
 	margin-bottom: 10px;
 	transition: all .4s;
+	cursor: pointer;
 }
 #clients .section-content{
 	margin-top: -5%;

@@ -1,6 +1,11 @@
 $(function(){
+
 	var timer;
 	var num = 0;
+	function add(a,b,c,d){
+		$(a).addClass(b);
+		$(c).addClass(d);
+	}
 	
 	//点击导航事件
 	$('.navbar-list li').click(function(event){
@@ -13,31 +18,25 @@ $(function(){
 			$('.navbar-default').addClass('navbar-luohe1');
 		}
 		if(num==1){
-			$('#abouts .nav-tabs').addClass('abouts-animate1');
-			$('#abouts .tab-content').addClass('abouts-animate2');
+			add('#abouts .nav-tabs','abouts-animate1','#abouts .tab-content','abouts-animate2');
 		}
 		if(num==2){
-			$('#services .section-title').addClass('services-animate1');
-			$('#services .services-box').addClass('services-animate2');
+			add('#services .section-title','services-animate1','#services .services-box','services-animate2');
 		}
 		if(num==3){
 			$('#solutions .section-title').addClass('services-animate1');
-			$('#solutions .solutions-box:nth-child(1)').addClass('solutions-animate1');
-			$('#solutions .solutions-box:nth-child(2)').addClass('solutions-animate1');
-			$('#solutions .solutions-box:nth-child(3)').addClass('solutions-animate1');
-			$('#solutions .solutions-box:nth-child(4)').addClass('solutions-animate1');
-			$('#solutions .solutions-box:nth-child(5)').addClass('solutions-animate2');
-			$('#solutions .solutions-box:nth-child(6)').addClass('solutions-animate2');
-			$('#solutions .solutions-box:nth-child(7)').addClass('solutions-animate2');
-			$('#solutions .solutions-box:nth-child(8)').addClass('solutions-animate2');
+			for(var i = 1;i<=4;i++){
+				$('#solutions .solutions-box:nth-child('+i+')').addClass('solutions-animate1');
+			}
+			for(var j = 4;j<=8;j++){
+				$('#solutions .solutions-box:nth-child('+j+')').addClass('solutions-animate2');
+			}
 		}
 		if(num==4){
-			$('#clients .section-title').addClass('services-animate1');
-			$('#clients .clients-box').addClass('client-animate1');
+			add('#clients .section-title','services-animate1','#clients .clients-box','client-animate1');
 		}
 		if(num==5){
-			$('#contact .section-title').addClass('services-animate1');
-			$('#contact .contact-box').addClass('contact-animate1');
+			add('#contact .section-title','services-animate1','#contact .contact-box','contact-animate1');
 		}
 		$('section').animate({'top':-100*num+'%'},350);
 		$(this).addClass('active').siblings('li').removeClass('active');
@@ -49,8 +48,7 @@ $(function(){
 		$('section').animate({'top':-100+'%'},350);
 		$('.navbar-list li').eq(num).addClass('active').siblings('li').removeClass('active');
 		if(num==1){
-			$('#abouts .nav-tabs').addClass('abouts-animate1');
-			$('#abouts .tab-content').addClass('abouts-animate2');
+			add('#abouts .nav-tabs','abouts-animate1','#abouts .tab-content','abouts-animate2');
 		}
 	})
 	
@@ -73,31 +71,25 @@ $(function(){
 				$('.navbar-default').addClass('navbar-luohe1');
 			}
 			if(num==1){
-				$('#abouts .nav-tabs').addClass('abouts-animate1');
-				$('#abouts .tab-content').addClass('abouts-animate2');
+				add('#abouts .nav-tabs','abouts-animate1','#abouts .tab-content','abouts-animate2');
 			}
 			if(num==2){
-				$('#services .section-title').addClass('services-animate1');
-				$('#services .services-box').addClass('services-animate2');
+				add('#services .section-title','services-animate1','#services .services-box','services-animate2');
 			}
 			if(num==3){
 				$('#solutions .section-title').addClass('services-animate1');
-				$('#solutions .solutions-box:nth-child(1)').addClass('solutions-animate1');
-				$('#solutions .solutions-box:nth-child(2)').addClass('solutions-animate1');
-				$('#solutions .solutions-box:nth-child(3)').addClass('solutions-animate1');
-				$('#solutions .solutions-box:nth-child(4)').addClass('solutions-animate1');
-				$('#solutions .solutions-box:nth-child(5)').addClass('solutions-animate2');
-				$('#solutions .solutions-box:nth-child(6)').addClass('solutions-animate2');
-				$('#solutions .solutions-box:nth-child(7)').addClass('solutions-animate2');
-				$('#solutions .solutions-box:nth-child(8)').addClass('solutions-animate2');
+				for(var i = 1;i<=4;i++){
+				$('#solutions .solutions-box:nth-child('+i+')').addClass('solutions-animate1');
+				}
+				for(var j = 4;j<=8;j++){
+					$('#solutions .solutions-box:nth-child('+j+')').addClass('solutions-animate2');
+				}
 			}
 			if(num==4){
-				$('#clients .section-title').addClass('services-animate1');
-				$('#clients .clients-box').addClass('client-animate1');
+				add('#clients .section-title','services-animate1','#clients .clients-box','client-animate1');
 			}
 			if(num==5){
-				$('#contact .section-title').addClass('services-animate1');
-				$('#contact .contact-box').addClass('contact-animate1');
+				add('#contact .section-title','services-animate1','#contact .contact-box','contact-animate1');
 			}
 			$('section').animate({'top':-100*num+'%'},350);
 			$('.navbar-list li').eq(num).addClass('active').siblings('li').removeClass('active');
@@ -105,55 +97,21 @@ $(function(){
 	})
 	
 	
+	
+	
 	//services放大——缩小动画效果
-	$('.row .services-box:nth-child(1)').hover(function(){
-		$('.row .services-box:nth-child(1) .services-text2').toggleClass('big');
-	})
-	$('.row .services-box:nth-child(2)').hover(function(){
-		$('.row .services-box:nth-child(2) .services-text2').toggleClass('big');
-	})
-	$('.row .services-box:nth-child(3)').hover(function(){
-		$('.row .services-box:nth-child(3) .services-text2').toggleClass('big');
-	})
-	$('.row .services-box:nth-child(4)').hover(function(){
-		$('.row .services-box:nth-child(4) .services-text2').toggleClass('big');
-	})
-	$('.row .services-box:nth-child(5)').hover(function(){
-		$('.row .services-box:nth-child(5) .services-text2').toggleClass('big');
-	})
-	$('.row .services-box:nth-child(6)').hover(function(){
-		$('.row .services-box:nth-child(6) .services-text2').toggleClass('big');
-	})
-	$('.row .services-box:nth-child(7)').hover(function(){
-		$('.row .services-box:nth-child(7) .services-text2').toggleClass('big');
-	})
-	$('.row .services-box:nth-child(8)').hover(function(){
-		$('.row .services-box:nth-child(8) .services-text2').toggleClass('big');
+	$('.row .services-box').hover(function(){
+		var j = $(this).index()+1;
+		var a = '.row .services-box:nth-child('+j+')'+' .services-text2';
+		$(a).toggleClass('big');
 	})
 	
 	//solution放大——缩小动画效果
-	$('.row .solutions-box:nth-child(1)').hover(function(){
-		$('.row .solutions-box:nth-child(1) .services-text2').toggleClass('big');
-	})
-	$('.row .solutions-box:nth-child(2)').hover(function(){
-		$('.row .solutions-box:nth-child(2) .services-text2').toggleClass('big');
-	})
-	$('.row .solutions-box:nth-child(3)').hover(function(){
-		$('.row .solutions-box:nth-child(3) .services-text2').toggleClass('big');
-	})
-	$('.row .solutions-box:nth-child(4)').hover(function(){
-		$('.row .solutions-box:nth-child(4) .services-text2').toggleClass('big');
-	})
-	$('.row .solutions-box:nth-child(5)').hover(function(){
-		$('.row .solutions-box:nth-child(5) .services-text2').toggleClass('big');
-	})
-	$('.row .solutions-box:nth-child(6)').hover(function(){
-		$('.row .solutions-box:nth-child(6) .services-text2').toggleClass('big');
-	})
-	$('.row .solutions-box:nth-child(7)').hover(function(){
-		$('.row .solutions-box:nth-child(7) .services-text2').toggleClass('big');
-	})
-	$('.row .solutions-box:nth-child(8)').hover(function(){
-		$('.row .solutions-box:nth-child(8) .services-text2').toggleClass('big');
+	$('.row .solutions-box').hover(function(){
+		var j = $(this).index()+1;
+		var a = '.row .solutions-box:nth-child('+j+')'+' .services-text2';
+		$(a).toggleClass('big');
 	})
 })
+
+	
